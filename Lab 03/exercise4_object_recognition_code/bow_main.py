@@ -81,7 +81,7 @@ def descriptors_hog(img, vPoints, cellWidth, cellHeight):
                 start_x = center_x + (cell_x) * w
                 end_x = center_x + (cell_x + 1) * w
                 x_seq = np.arange(start_x, end_x, 1)
-                #TODO: Why?
+                
                 angles = np.arctan2(grad_y[y_seq, x_seq], grad_x[y_seq, x_seq])%(2*np.pi)
                 angles_int = (np.round(angles*nBins/(2*np.pi))).astype(np.intc)
 
